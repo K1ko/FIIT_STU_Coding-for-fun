@@ -5,21 +5,23 @@ void prufers_tree(int prufer[],int m)
     int vertices = m + 2;
     int degree[vertices];
 
-    //initialize the arraz of vertices
+    //initialize the array of vertices
 
     for(int i =0; i < vertices; i++)
         degree[i] = 0;
 
-    //number of occurences of vertex in prufer sequence
+    //number of occurrences of vertex in prufer sequence
     for(int i =0;i < vertices-2;i++)
         degree[prufer[i]-1] += 1;
     printf("\nThe edge set E(Graph) is: \n");
     //Find the smallest label not present in prufer
     int k = 0;
+    //if k + 1 is not present in prufer sequence
     for(int i = 0;i < vertices - 2;i++){
         for(k = 0;k < vertices;k++){
             //remove from prufers sequence
             if(degree[k] == 0){
+                //print pair
                 degree[k] = -1;
                 printf("(%d,%d) ",k+1,prufer[i]);
                 degree[prufer[i]-1]--;
@@ -28,6 +30,7 @@ void prufers_tree(int prufer[],int m)
         }
     }
     k = 0;
+    //print the last edge
     for(int i =0; i < vertices;i++)
     {
         if(degree[i]== 0 && k == 0)
@@ -37,7 +40,6 @@ void prufers_tree(int prufer[],int m)
         }
         else if(degree[i] == 0 && k == 1)
             printf("%d)\n",i+1);
-
     }
 }
 int main() {
@@ -46,5 +48,3 @@ int main() {
     prufers_tree(prufer,n);
     return 0;
 }
-
-
