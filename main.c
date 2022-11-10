@@ -43,8 +43,14 @@ void prufers_tree(int prufer[],int m)
     }
 }
 int main() {
-    int prufer []={ 4, 1, 3 ,4 };
-    int n = sizeof(prufer)/sizeof(prufer[0]);
-    prufers_tree(prufer,n);
+    //input odd numbers of how many times should cycle repeat
+    int N = 0;
+    printf("Enter the number of times the cycle should repeat: ");
+    scanf("%d",&N);
+    //fill array with numbers
+    int prufer[N];
+    for(int i = 0; i < N; i++)
+        scanf("%d",&prufer[i]);
+    prufers_tree(prufer,N);
     return 0;
 }
