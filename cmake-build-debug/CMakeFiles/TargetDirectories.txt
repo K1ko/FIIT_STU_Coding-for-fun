@@ -1,0 +1,3 @@
+/Users/kristianko/CLionProjects/Prufers_Code_1/cmake-build-debug/CMakeFiles/Prufers_Code_1.dir
+/Users/kristianko/CLionProjects/Prufers_Code_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kristianko/CLionProjects/Prufers_Code_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
